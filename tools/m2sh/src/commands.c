@@ -537,7 +537,7 @@ static int run_server(struct ServerRun *r, tns_value_t *res)
         uuid = bstrcpy(r->uuid);
     }
 
-    bstring command = bformat("%s mongrel2 %s %s %s",
+    bstring command = bformat("%s /usr/local/bin/mongrel2 %s %s %s",
             r->sudo, bdata(config), bdata(uuid), bdata(module));
 
     system(bdata(command));
